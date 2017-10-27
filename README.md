@@ -1,24 +1,16 @@
-# README
+name - ваше имя сервиса
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1  - download docker for mac - https://download.docker.com/mac/stable/Docker.dmg
 
-Things you may want to cover:
+2 - Войти в папку проекта
 
-* Ruby version
+3 - Запустить демон - docker-compose up --build -d name
 
-* System dependencies
+4 - Создать базу данных - docker-compose run name rake db:create
 
-* Configuration
+5 - Создать базу данных - docker-compose run name rake db:migrate
 
-* Database creation
+6 - Наполнить бд данными - docker-compose run name rake db:seed
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+a - остановка демона - docker-compose down
+b - листинг процессов - docker ps
