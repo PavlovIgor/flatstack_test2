@@ -33,6 +33,10 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Devise for autheticete users. Read more: https://github.com/plataformatec/devise
+gem 'devise'
+# Acvtive admin. Read more: https://activeadmin.info/documentation.html
+gem 'activeadmin', github: 'activeadmin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
