@@ -17,9 +17,8 @@ module RealEstateAuctions
     config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :ru
+    config.i18n.default_locale = :en
     config.exceptions_app = self.routes
-    config.force_ssl = true
 
   end
 end
