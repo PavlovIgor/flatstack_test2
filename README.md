@@ -9,7 +9,7 @@ Up dev environment:
 
 Stop and remove dev environment:
 
-1 - docker-compose down
+1 - docker-compose down\n
 2 - docker stop $(docker ps -a -q)
 3 - docker rm $(docker ps -a -q)
 4 - docker rmi $(docker images -a -q)
