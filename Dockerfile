@@ -1,8 +1,8 @@
 FROM ruby:2.3.3
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
-RUN mkdir /auctions
-WORKDIR /auctions
-ADD Gemfile /auctions/Gemfile
-ADD Gemfile.lock /auctions/Gemfile.lock
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev
+RUN mkdir /app
+WORKDIR /app
+ADD Gemfile /app/Gemfile
+ADD Gemfile.lock /app/Gemfile.lock
 RUN bundle
-ADD . /auctions
+ADD . /app
