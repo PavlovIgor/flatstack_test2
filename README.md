@@ -8,6 +8,12 @@ Set variables:
 
 4 - config/initializers/active_admin.rb set config.site_title
 
+5 - config/provision/configs/application.yml set variables
+
+6 - config/provision/configs/database.yml set password
+
+7 - config/provision/keys/ set keys
+
 
 Up dev environment:
 
