@@ -16,11 +16,14 @@ gem 'redis', '~> 3.0'
 
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
+gem 'active_admin_flat_skin'
 
 gem 'jquery-rails', '~> 4.3.1'
 gem 'coffee-rails', '~> 4.2'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
+
+
 gem 'carrierwave', '~> 0.9'
 gem "fog-aws", '~> 1.2'
 
