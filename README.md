@@ -19,15 +19,15 @@ Up dev environment:
 
 1  - download docker for mac - https://download.docker.com/mac/stable/Docker.dmg
 
-2 - Войти в папку проекта
+2 - cd to project path
 
-3 - Запустить демон - docker-compose up
+3 - Start daemon - docker-compose up
 
-4 - Создать базу данных - docker-compose run webapp rake db:create
+4 - Create database - docker-compose run webapp rake db:create
 
-5 - Миграции базы данных - docker-compose run webapp rake db:migrate
+5 - Migrations - docker-compose run webapp rake db:migrate
 
-6 - Наполнить бд данными - docker-compose run webapp rake db:seed
+6 - Seed - docker-compose run webapp rake db:seed
 
 
 Stop and remove dev environment:
@@ -43,6 +43,6 @@ Stop and remove dev environment:
 
 Check docker images:
 
-1 - листинг процессов - docker ps
+1 - list docker processes - docker ps
 
-2 - docker images
+2 - show all images - docker images
