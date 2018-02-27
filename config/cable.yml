@@ -1,12 +1,11 @@
 development:
   adapter: redis
-  url: redis://localhost:6379
+  url: redis://redis_db:6379
 
 test:
   adapter: redis
-  url: redis://localhost:6379
+  url: redis://redis_db:6379
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
-  channel_prefix: real_estate_auctions_production
+  url: redis://localhost:6379
