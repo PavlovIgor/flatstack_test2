@@ -11,7 +11,7 @@
     user: 'deploy'
     home: '/home/{{ user }}'
     rbenv_root: '{{ home }}/.rbenv'
-    app_name: 'TaxDeedAuctions'
+    app_name: ''
     application: '{{ home }}/applications/{{ app_name }}'
 
   tasks:

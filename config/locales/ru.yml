@@ -8,18 +8,6 @@ ru:
         phone: Телефон
         password: Пароль
         password_confirmation: Подтвердить пароль
-      subject:
-        name: Название
-        comment: Комментарий
-        shoting_type: Тип съемки
-        periodicity: Периодичность
-      layer:
-        day: Дата
-        hero_image: Снимок
-        content: Информация
-      option:
-        title: Название
-        img: Изображение
 
   date:
     abbr_day_names:

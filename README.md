@@ -14,6 +14,8 @@ Set variables:
 
 7 - config/provision/keys/ set keys
 
+8 - config/provision/playbook.yml set app_name
+
 
 Up dev environment:
 
