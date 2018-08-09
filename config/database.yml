@@ -5,11 +5,11 @@ default: &default
 
 development:
   <<: *default
-  database: rails_komponent_stimulus_fish_development
+  database: fs2_development
 
 test:
   <<: *default
-  database: rails_komponent_stimulus_fish_test
+  database: fs2_test
 
 production:
   <<: *default

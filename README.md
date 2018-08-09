@@ -7,27 +7,24 @@ Fish for create rails project with webpack, komponent and stimulus.
     $ git clone git@gitlab.com:igorpavlov-ip/rails_komponent_stimulus_fish.git project_name
     $ cd project_name
     $ bundle
-    $ rails webpacker:install
-    $ rails generate komponent:install --stimulus
     $ yarn install
     $ rails db:create
+
+config/database.yml
+
     $ rails db:migrate
     $ foreman start -f Procfile.dev
 
 # Set variables:
 
-1 - config/database.yml production section
+config/deploy.rb set server, repo, app name, user
 
-2 - config/deploy.rb set server, repo, app name, user
+config/environment set smtp mailer settings
 
-3 - config/environment set smtp mailer settings
+config/provision/configs/application.yml set variables
 
-4 - config/initializers/active_admin.rb set config.site_title
+config/provision/configs/database.yml set password
 
-5 - config/provision/configs/application.yml set variables
+config/provision/keys/ set keys
 
-6 - config/provision/configs/database.yml set password
-
-7 - config/provision/keys/ set keys
-
-8 - config/provision/playbook.yml set app_name
+config/provision/playbook.yml set user, app_name
