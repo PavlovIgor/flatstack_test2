@@ -15,11 +15,15 @@ config/database.yml
     $ rails db:migrate
     $ foreman start -f Procfile.dev
 
-# Set variables:
+# Mail
+
+config/environment set smtp mailer settings
+
+# Capistrano
 
 config/deploy.rb set server, repo, app name, user
 
-config/environment set smtp mailer settings
+# Ansible
 
 config/provision/configs/application.yml set variables
 
