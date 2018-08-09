@@ -15,6 +15,8 @@ config/database.yml
     $ rails db:migrate
     $ foreman start -f Procfile.dev
 
+config/application.yml
+
 # Mail
 
 config/environment set smtp mailer settings
