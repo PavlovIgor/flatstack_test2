@@ -8,10 +8,10 @@ Fish for create rails project with webpack, komponent and stimulus.
     $ cd project_name
     $ bundle
     $ yarn install
-    $ rails db:create
 
 config/database.yml
 
+    $ rails db:create
     $ rails db:migrate
     $ foreman start -f Procfile.dev
 
