@@ -1,21 +1,18 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
   pool: 20
-  host: localhost
 
 development:
   <<: *default
-  database: webapp_development
-  host: db
+  database: rails_komponent_stimulus_fish_development
 
 test:
   <<: *default
-  database: webapp_test
-  host: db
+  database: rails_komponent_stimulus_fish_test
 
 production:
   <<: *default
-  database:
-  password:
+  username: postgres
+  database: rails_komponent_stimulus_fish_production
+  password: rails_komponent_stimulus_fish

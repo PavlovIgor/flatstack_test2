@@ -1,3 +1,4 @@
+# TODO: Not working
 version: '3'
 services:
   db:
@@ -8,24 +9,13 @@ services:
     ports:
       - '6379:6379'
 
-  node:
-    image: "node:8"
-    environment:
-      - NODE_ENV=production
-    volumes:
-      - ./:/usr/src/app
-    expose:
-      - "8080"
-
   webapp:
     build: .
-    tty: true
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    command: foreman start
     volumes:
-      - .:/app
+      - .:/webapp
     ports:
       - "3000:3000"
     depends_on:
       - db
       - redis
-      - node

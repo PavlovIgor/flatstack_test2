@@ -23,7 +23,7 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 set :linked_files, %w{config/database.yml config/application.yml}
-set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/blocks public/demo_page_blocks public/demo_pages public/external public/page_blocks public/projects}
 set :rbenv_type, :user
 set :rbenv_ruby, '2.4.2'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
@@ -34,7 +34,7 @@ set :puma_init_active_record, true
 # set :branch,        :master
 # set :format,        :pretty
 # set :log_level,     :debug
-set :keep_releases, 5
+set :keep_releases, 3
 set :pty,  true
 set :sidekiq_config, "#{current_path}/config/sidekiq.yml"
 set :sidekiq_env, 'production'

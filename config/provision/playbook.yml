@@ -7,8 +7,8 @@
     raw: sudo apt-get -y install python-simplejson
 
   vars:
-    ruby_version: '2.4.2'
-    user: 'deploy'
+    ruby_version: '2.5.1'
+    user: ''
     home: '/home/{{ user }}'
     rbenv_root: '{{ home }}/.rbenv'
     app_name: ''
@@ -51,6 +51,7 @@
 
     - name: 'account | copy ssh public key'
       copy: 'src=keys/id_rsa.pub dest={{ home }}/.ssh/id_rsa.pub owner={{ user }} group={{ user }} mode=0644'
+
 
     ### Install ruby ###
     - name: 'rbenv | clone repo'
@@ -109,7 +110,7 @@
       ignore_errors: yes
 
     - name: 'postgresql | set auth type'
-      copy: 'src=configs/pg_hba.conf dest=/etc/postgresql/9.5/main/pg_hba.conf owner=postgres group=postgres mode=0644'
+      copy: 'src=configs/pg_hba.conf dest=/etc/postgresql/10/main/pg_hba.conf owner=postgres group=postgres mode=0644'
       when: 'postgres_login|failed'
 
     - name: 'postgresql | restart service'

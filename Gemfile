@@ -5,60 +5,71 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
-gem 'rails', '~> 5.1.4'
-gem 'pg'
+# Backend
+gem 'rails', '~> 5.1.5'
+gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
-gem 'turbolinks', '~> 5'
+gem 'foreman'
+gem 'redis', '~> 4.0'
+# gem 'sidekiq'
+
+# Tools
 gem 'jbuilder', '~> 2.5'
-gem 'redis', '~> 3.0'
-gem "figaro"
-# gem 'therubyracer', platforms: :ruby
-
+gem 'figaro'
 gem 'devise'
-gem 'activeadmin', github: 'activeadmin'
-gem 'active_admin_flat_skin'
+gem 'inherited_resources'
+# gem 'simple_form'
+# gem 'carrierwave', '~> 1.2'
+# gem 'nokogiri'
+# gem 'deep_cloneable'
+# gem 'rubyzip', '>= 1.0.0'
+# gem 'zip-zip'
+# gem 'uglifier'
+# gem 'whenever', require: false
+# gem 'carrierwave-picture', :path => "/Users/arturgaraev/ruby/carrierwave-picture"
+# gem "fog-aws", '~> 1.2'
+# gem 'cancancan', '~> 2.0'
+# gem 'bcrypt', '~> 3.1.7'
 
-gem 'jquery-rails', '~> 4.3.1'
-gem 'coffee-rails', '~> 4.2'
-gem 'sass-rails', '~> 5.0'
-gem 'bootstrap', '~> 4.0.0.beta3'
-gem 'material_icons'
-
-gem 'uglifier', '>= 1.3.0'
-gem 'carrierwave', '~> 0.9'
-gem "fog-aws", '~> 1.2'
-gem 'whenever', :require => false
-gem "slack-notifier"
-gem 'bcrypt'
-
-group :test do
-  gem 'rspec-rails', '~> 3.5.2'
-  gem 'factory_girl_rails', '~> 4.8.0'
-  gem 'capybara', '~> 2.13'
-  gem 'rubocop', '~> 0.50.0', require: false
-  gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
-
-end
+# Frontend
+gem "komponent"
+gem 'webpacker'
 
 group :development, :test do
+
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'factory_bot'
+  gem 'factory_bot_rails'
+  gem 'rails-erd', '~> 1.5'
+
 end
 
 group :development do
-  gem 'guard-livereload', '~> 2.5',   require: false
+
+  gem 'better_errors'
+  gem 'rack-cors', '1.0.2'
+  gem 'web-console', '>= 3.3.0'
+  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem 'seed_dump', '3.2.4'
+
+  gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+
   gem 'capistrano', '~> 3.7',         require: false
-  gem 'capistrano-rbenv'
+  gem 'capistrano-rbenv', '2.1.3'
   gem 'capistrano-rails', '~> 1.2',   require: false
   gem 'capistrano-bundler', '~> 1.2', require: false
   gem 'capistrano3-puma', '~> 1.2',   require: false
-  gem 'capistrano-sidekiq'
-  gem 'rack-cors'
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
-  gem 'seed_dump'
+  gem "capistrano-yarn"
+  # gem 'capistrano-sidekiq', '1.0.0'
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'rb-readline'
