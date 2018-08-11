@@ -1,1 +1,1 @@
-web: bundle exec puma -p $PORT
+server: bin/rails server
