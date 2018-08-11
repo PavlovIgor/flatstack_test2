@@ -36,4 +36,9 @@ Gemfile.lock
 /node_modules
 yarn-debug.log*
 .yarn-integrity
-/config/application.yml
+
+config/application.yml
+config/database.yml
+config/secrets.yml
+config/environment.rb
+config/deploy.rb
