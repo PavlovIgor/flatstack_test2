@@ -16,6 +16,7 @@ gem 'redis', '~> 4.0'
 # Tools
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
+gem 'uglifier'
 gem 'devise'
 gem 'inherited_resources'
 # gem 'simple_form'
@@ -24,7 +25,6 @@ gem 'inherited_resources'
 # gem 'deep_cloneable'
 # gem 'rubyzip', '>= 1.0.0'
 # gem 'zip-zip'
-# gem 'uglifier'
 # gem 'whenever', require: false
 # gem 'carrierwave-picture', :path => "/Users/arturgaraev/ruby/carrierwave-picture"
 # gem "fog-aws", '~> 1.2'
