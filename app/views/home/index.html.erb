@@ -1,1 +1,9 @@
-You in!
+<%= c "pages/outside" do %>
+
+  <%= c "elements/jumbotron",
+        title: "Календарь событий",
+        subtitle: "Простой календарь событий для теста Flatstack",
+        text: nil,
+        button: { text: "Войти", link: new_user_session_path } %>
+
+<% end %>

@@ -1,0 +1,15 @@
+<div class="pages-inside">
+  <%= c "elements/navbars/inside",
+        logo_link: "/",
+        links: [
+          { text: "Мои события", link: events_path },
+          { text: "Все события", link: events_path(scope: :all) },
+          { text: "Создать событие", link: new_event_path },
+          { text: current_user.full_name, link: edit_user_registration_path }
+        ],
+        buttons: [
+          { text: "Выйти", link: destroy_user_session_path, method: :delete },
+        ] %>
+
+  <%= yield %>
+</div>

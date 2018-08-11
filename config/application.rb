@@ -20,5 +20,13 @@ module RealEstateAuctions
     config.i18n.default_locale = :en
     config.exceptions_app = self.routes
 
+    config.generators do |g|
+      g.test_framework  false
+      g.stylesheets     false
+      g.javascripts     false
+      g.helper          false
+      g.channel         assets: false
+    end
+
   end
 end

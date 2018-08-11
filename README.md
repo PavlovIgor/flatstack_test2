@@ -12,9 +12,6 @@ Fish for create rails project with webpack, komponent and stimulus.
 config/database.yml
 
     $ rails db:create
-
-config/database.yml
-
     $ rails db:migrate
     $ foreman start -f Procfile.dev
 
@@ -23,6 +20,14 @@ config/application.yml
 # Mail
 
 config/environment set smtp mailer settings
+
+# Devise
+
+    $ rails generate devise Model
+    $ rails db:migrate
+    $ rails generate devise:views
+
+Restart server
 
 # Capistrano
 

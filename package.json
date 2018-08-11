@@ -3,13 +3,24 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
+    "actioncable": "^5.1.4",
     "bootstrap": "4.0.0",
     "font-awesome": "^4.7.0",
+    "fullcalendar": "^3.9.0",
     "jquery": "^3.3.1",
+    "moment": "^2.22.2",
     "normalize.css": "^7.0.0",
     "popper.js": "^1.14.1",
+    "postcss-inline-svg": "^3.0.0",
+    "postcss-nested": "^3.0.0",
     "rails-ujs": "^5.1.5",
-    "stimulus": "^1.0.1"
+    "resolve-url-loader": "^2.3.0",
+    "smartwizard": "^4.3.1",
+    "stimulus": "^1.0.1",
+    "tether": "^1.4.3",
+    "turbolinks": "^5.1.1",
+    "underscore": "^1.9.1",
+    "webpack-merge": "^4.1.0"
   },
   "scripts": {
     "lint-staged": "$(yarn bin)/lint-staged"

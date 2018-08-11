@@ -1,0 +1,12 @@
+<div class="pages-outside">
+
+  <%= c "elements/navbars/outside",
+        logo_link: "/",
+        buttons: [
+          { text: "Войти", link: new_user_session_path },
+          { text: "Регистрация", link: new_user_registration_path }
+        ] %>
+
+  <%= yield %>
+
+</div>
