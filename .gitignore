@@ -39,6 +39,3 @@ yarn-debug.log*
 
 config/application.yml
 config/database.yml
-config/secrets.yml
-config/environment.rb
-config/deploy.rb
