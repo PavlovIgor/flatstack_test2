@@ -1,4 +1,4 @@
-class Api::V1::EventPresenter
+class Api::V1::CalendarPresenter
 
   attr_reader :events, :start, :stop
 

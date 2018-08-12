@@ -2,7 +2,7 @@ import { BaseController } from "controllers/base_controller.js";
 
 export default class extends BaseController {
 
-  static targets = ["calendar"]
+  static targets = ["calendar", "info"]
 
   initialize() {
     var context = this;
@@ -40,10 +40,22 @@ export default class extends BaseController {
 
         $('.fc-day').css('background-color', '');
         $(this).css('background-color', '#f0f0f0');
-      },
-      eventClick: function(calEvent, jsEvent, view) {
       }
     })
+  }
+
+  show_date(data, context){
+    $(context.infoTarget).html('')
+
+    $(data).each(function(){
+      $(context.infoTarget).append(`
+        <li class="list-group-item">
+          <h6>${$(this).attr('name')}</h6>
+          <span>${$(this).attr('date')}</span>
+          <p>${$(this).attr('truncated')}</p>
+        </li>
+      `);
+    });
   }
 
   prepare_events(data, callback){
