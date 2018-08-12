@@ -33,7 +33,10 @@ export default class extends BaseController {
       dayClick:       function(date, jsEvent, view) {
         context.api_call({
           url: 'api/date',
-          data: { date: date.format() },
+          data: {
+            date: date.format(),
+            scope:  context.get_query_param('scope')
+          },
           success: context.show_date,
           error: function(){ console.log('error') }
         })
@@ -53,6 +56,8 @@ export default class extends BaseController {
           <h6>${$(this).attr('name')}</h6>
           <span>${$(this).attr('date')}</span>
           <p>${$(this).attr('truncated')}</p>
+          <a class="btn btn-outline-success btn-sm" href="/events/${$(this).attr('id')}">Посмотреть</a>
+          ${ $(this).attr('edit') ? `<a class="btn btn-outline-secondary btn-sm" href="/events/${$(this).attr('id')}/edit">Редактировать</a>` : '' }
         </li>
       `);
     });

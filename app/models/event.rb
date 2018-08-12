@@ -8,9 +8,9 @@ class Event < ApplicationRecord
   scope :monthly,  -> { where(repeat: :monthly) }
   scope :yearly,  -> { where(repeat: :yearly) }
   scope :between, ->(start, stop) { where('date >= ? AND date <= ?', start, stop) }
-  scope :dow, ->(dow) { where('extract(dow from date) in (?)', dow) }
-  scope :dom, ->(dom) { where('extract(day from date) in (?)', dom) }
-  scope :doy, ->(doy) { where('extract(doy from date) in (?)', doy) }
+  scope :dow, ->(date) { where('date <= ? AND extract(dow from date) in (?)', date, date.wday) }
+  scope :dom, ->(date) { where('date <= ? AND extract(day from date) in (?)', date, date.mday) }
+  scope :doy, ->(date) { where('date <= ? AND extract(doy from date) in (?)', date, date.yday) }
 
   validates :name, :date, :repeat, presence: true
 

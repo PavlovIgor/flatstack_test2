@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <ul class="navbar-nav mr-auto">
-        <% @links.each do |link| %>
+        <% Array(@links).each do |link| %>
           <li class="nav-item">
             <%= link_to link[:text],
                         link[:link],
@@ -26,7 +26,20 @@
         <% end %>
       </ul>
 
-      <% @buttons.each do |button| %>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= @dropdown[:text] %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <% Array(@dropdown[:links]).each do |l| %>
+              <a class="dropdown-item" href="<%= l[:link] %>"><%= l[:text] %></a>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+
+      <% Array(@buttons).each do |button| %>
         <%= link_to button[:text],
                     button[:link],
                     class: 'btn btn-outline-success my-2 my-sm-0 mx-1',
