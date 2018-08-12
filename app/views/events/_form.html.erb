@@ -8,7 +8,13 @@
 
   <div class="form-group">
     <%= f.label :repeat %><br />
-    <%= f.select(:repeat, Event.repeats.keys, {}, class: 'form-control') %>
+    <%= f.select( :repeat,
+                  options_for_select(
+                    f.object.class.translated_repeats.map { |r, k, _v| [r, k] },
+                    :no_repeat
+                  ),
+                  {},
+                  class: 'form-control') %>
     <small class="form-text text-muted">Обязатльно</small>
   </div>
 
@@ -24,7 +30,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Создать", class: 'btn btn-success' %>
+    <%= f.submit "Отправить", class: 'btn btn-success' %>
   </div>
 
 <% end %>

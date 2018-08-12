@@ -1,0 +1,31 @@
+<div class="elements-notifications-form">
+
+  <% [:notice, :error, :alert].each do |notice_type| %>
+
+    <% if flash[notice_type] %>
+
+      <% notice_class = (notice_type == :notice) ? "primary" : "danger" %>
+
+      <div class="alert alert-<%= notice_class %> alert-dismissible fade show" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <% Array(flash[notice_type]).each do |msgs| %>
+
+          <% Array(msgs).each do |message| %>
+
+            <div><%= message %></div>
+
+          <%end%>
+
+        <% end %>
+
+      </div>
+
+    <% end %>
+
+  <% end %>
+
+</div>

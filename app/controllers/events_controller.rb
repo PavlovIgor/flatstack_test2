@@ -2,8 +2,14 @@ class EventsController < InheritedResources::Base
   before_action :authenticate_user!
 
   def create
-    current_user.events.create!(permitted_params[:event])
-    redirect_to events_path
+    @event = current_user.events.build(permitted_params[:event])
+    create! do |success, failure|
+      failure.html do
+        flash[:error] = resource.errors.full_messages
+        redirect_to new_event_url
+      end
+      success.html { redirect_to events_path }
+    end
   end
 
   def edit
@@ -15,8 +21,12 @@ class EventsController < InheritedResources::Base
   end
 
   def update
-    super do |format|
-      format.html { redirect_to events_path }
+    update! do |success, failure|
+      failure.html do
+        flash[:error] = resource.errors.full_messages
+        redirect_to edit_event_url(@event)
+      end
+      success.html { redirect_to events_path }
     end
   end
 
