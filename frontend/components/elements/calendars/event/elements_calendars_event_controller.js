@@ -53,8 +53,8 @@ export default class extends BaseController {
     $(data).each(function(){
       $(context.infoTarget).append(`
         <li class="list-group-item">
-          <h6>${$(this).attr('name')}</h6>
-          <span>${$(this).attr('date')}</span>
+          <h4>${$(this).attr('name')}</h4>
+          <small>${$(this).attr('date')}</small>
           <p>${$(this).attr('truncated')}</p>
           <a class="btn btn-outline-primary btn-sm" href="/events/${$(this).attr('id')}">Посмотреть</a>
           ${ $(this).attr('edit') ? `<a class="btn btn-outline-danger btn-sm" href="/events/${$(this).attr('id')}/edit">Редактировать</a>` : '' }
