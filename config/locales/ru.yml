@@ -21,7 +21,7 @@ ru:
         name: Название
         description: Описание
         repeat_list:
-          no_repeat: Без повторов
+          not_repeat: Без повторов
           weekly: Каждую неделю
           monthly: Каждый месяц
           yearly: Каждый год

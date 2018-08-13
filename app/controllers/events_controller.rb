@@ -30,10 +30,9 @@ class EventsController < InheritedResources::Base
     end
   end
 
-private
+  private
 
   def permitted_params
     params.permit(event: [:name, :date, :repeat, :description])
   end
-
 end

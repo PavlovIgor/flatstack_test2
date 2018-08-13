@@ -1,9 +1,10 @@
 class Api::V1::CalendarPresenter
-
   attr_reader :events, :start, :stop
 
   def initialize(events, start, stop)
-    @events, @start, @stop = events, start, stop
+    @events = events
+    @start = start
+    @stop = stop
   end
 
   def as_json
@@ -15,7 +16,7 @@ class Api::V1::CalendarPresenter
 
 private
 
-  def event_dates(event, scope, group)
+  def event_dates(event, group)
     dates = (event.date..Date.parse(@stop)).group_by { |d| d.public_send(group) }
     Array(dates[event.date.public_send(group)])
   end
@@ -24,7 +25,7 @@ private
     result = []
 
     @events.send(scope).find_each do |event|
-      event_dates(event, scope, group).each do |date|
+      event_dates(event, group).each do |date|
         event.date = date
         result << event.as_json
       end

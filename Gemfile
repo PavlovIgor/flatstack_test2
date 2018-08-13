@@ -58,6 +58,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'seed_dump', '3.2.4'
+  gem 'rubocop', require: false
 
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'

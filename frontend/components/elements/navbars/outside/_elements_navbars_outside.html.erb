@@ -1,6 +1,6 @@
 <div class="elements-navbars-outside">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="<%= @logo_link %>"><%= Figaro.env.app_name %></a>
     <button class="navbar-toggler"
@@ -22,7 +22,7 @@
       <% @buttons.each do |button| %>
         <%= link_to button[:text],
                     button[:link],
-                    class: 'btn btn-outline-success my-2 my-sm-0 mx-1' %>
+                    class: 'btn btn-outline-light my-2 my-sm-0 mx-1' %>
       <% end %>
 
     </div>

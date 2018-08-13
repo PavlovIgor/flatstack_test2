@@ -28,7 +28,7 @@ export default class extends BaseController {
         });
       },
       locale:         'ru',
-      eventColor:     '#28a745',
+      eventColor:     '#528078',
       eventTextColor: '#fff',
       dayClick:       function(date, jsEvent, view) {
         context.api_call({
@@ -56,8 +56,8 @@ export default class extends BaseController {
           <h6>${$(this).attr('name')}</h6>
           <span>${$(this).attr('date')}</span>
           <p>${$(this).attr('truncated')}</p>
-          <a class="btn btn-outline-success btn-sm" href="/events/${$(this).attr('id')}">Посмотреть</a>
-          ${ $(this).attr('edit') ? `<a class="btn btn-outline-secondary btn-sm" href="/events/${$(this).attr('id')}/edit">Редактировать</a>` : '' }
+          <a class="btn btn-outline-primary btn-sm" href="/events/${$(this).attr('id')}">Посмотреть</a>
+          ${ $(this).attr('edit') ? `<a class="btn btn-outline-danger btn-sm" href="/events/${$(this).attr('id')}/edit">Редактировать</a>` : '' }
         </li>
       `);
     });

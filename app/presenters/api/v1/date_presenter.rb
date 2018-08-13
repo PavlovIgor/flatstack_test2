@@ -1,5 +1,4 @@
 class Api::V1::DatePresenter
-
   attr_reader :events, :date, :current_user
 
   def initialize(events, date, current_user)
@@ -19,5 +18,4 @@ class Api::V1::DatePresenter
     end
 
   end
-
 end
